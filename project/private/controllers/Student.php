@@ -2,7 +2,7 @@
 
 class Student
 {
-    function __construct(){
+    function index(){
         echo "I am from Student";
     }
 }

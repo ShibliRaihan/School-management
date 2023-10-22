@@ -2,7 +2,7 @@
 
 class Singup extends Controller
 {
-    function __construct(){
+    function index(){
         $this->view('singup');
     }
 }

@@ -6,10 +6,10 @@
 class Home extends Controller
 {
 	
-	public function __construct()
+	function index()
 	{
-		 $this->view('home');
+		$db = new Database();
+		$data = $db->run("select * from users");
+		$this->view('home',['rows' => $data]);
 	}
 }
-
- 
