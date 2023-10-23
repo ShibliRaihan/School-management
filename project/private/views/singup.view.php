@@ -3,7 +3,9 @@
 
 <main>
     <div class="container">
-
+        <?php
+        print_r($errors);
+        ?>
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
                 <div class="row justify-content-center">
@@ -19,17 +21,17 @@
                         <div class="card mb-3">
 
                             <div class="card-body p-3">
-                                <form class="row g-3 needs-validation" novalidate>
+                                <form class="row g-3 needs-validation" novalidate method="post">
                                     <div class="col-12">
                                         <label for="yourFirstName" class="form-label">Your First Name</label>
-                                        <input type="text" name="name" class="form-control" id="yourName" required>
+                                        <input type="text" name="fname" class="form-control" id="yourName" required>
                                         <div class="invalid-feedback">Please, enter your first name!</div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourLastName" class="form-label">Your Last Name</label>
-                                        <input type="email" name="email" class="form-control" id="yourEmail" required>
-                                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                                        <input type="text" name="lname" class="form-control" id="yourName" required>
+                                        <div class="invalid-feedback">Please, enter your first name!</div>
                                     </div>
 
                                     <div class="col-12">
@@ -39,21 +41,21 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Select Gender</option>
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                            <option value="3">Other</option>
+                                        <select class="form-select" aria-label="Default select example" name="gender">
+                                            <option disabled>Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
 
                                     <div class="col-12">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Select Rank</option>
-                                            <option value="1">Student</option>
-                                            <option value="2">Reception</option>
-                                            <option value="3">Admin</option>
-                                            <option value="4">*Super Admin</option>
+                                        <select class="form-select" aria-label="Default select example" name="role">
+                                            <option disabled>Select Rank</option>
+                                            <option value="Student">Student</option>
+                                            <option value="Reception">Reception</option>
+                                            <option value="Admin">Admin</option>
+                                            <option value="Super">*Super Admin</option>
                                         </select>
                                     </div>
 
