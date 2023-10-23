@@ -1,41 +1,45 @@
 <?php
-class Database 
-{
-    private function connect ()
-    {
-        $string = "mysql:host=localhost;dbname=school_db";
-        if (!$conn = new PDO($string, 'root', '')) 
-        {
-            die("Database not connect!");
-        }
-        return $conn;
-    }
-    public function run ($query,$data = [],$data_type = "object")
-    {
-        $conn = $this->connect();
-        $stm = $conn->prepare($query);
 
-        if ($stm)
-         {
+/**
+ * Database connection
+ */
+class Database
+{
+
+    private function connect()
+    {
+        // code..
+        $string = DBDRIVER . ":host=" . DBHOST . ";dbname=" . DBNAME;
+        if (!$con = new PDO($string, DBUSER, DBPASS)) {
+            die("could not connect to database");
+        }
+
+        return $con;
+    }
+
+    public function query($query, $data = array(), $data_type = "object")
+    {
+
+        $con = $this->connect();
+        $stm = $con->prepare($query);
+
+        $result = false;
+        if ($stm) {
             $check = $stm->execute($data);
-            if ($check)
-            {
+            if ($check) {
                 if ($data_type == "object") {
-                    $data = $stm->fetchAll(PDO::FETCH_OBJ);
-                }else
-                {
-                    $data = $stm->fetchAll(PDO::FETCH_ASSOC);
-                }
-                if (is_array($data) && count($data)>0)
-                {
-                    return is_array($data) ? $data : [];
+                    $result = $stm->fetchAll(PDO::FETCH_OBJ);
+                } else {
+                    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
                 }
             }
-            return false;
-        }   
-    }
-    public function query ()
-    {
+        }
 
+        
+        if (is_array($result) && count($result) > 0) {
+            return $result;
+        }
+
+        return false;
     }
 }

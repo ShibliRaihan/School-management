@@ -9,7 +9,9 @@
         </section>
     </div>
 </main><!-- End #main -->
+
         <?php
+            echo "<pre>";
             print_r($rows);
         ?>
 <?php $this->view('inc/down');  ?>

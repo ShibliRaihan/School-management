@@ -1,15 +1,34 @@
-<?php 
+<?php
+
 /**
  * 
  */
 
 class Home extends Controller
 {
-	
 	function index()
 	{
-		$db = new Database();
-		$data = $db->run("select * from users");
-		$this->view('home',['rows' => $data]);
+		$user = new User;
+
+		$datas = [
+			'firstname' => 'Eathorne',
+			'lastname' => 'Banda',
+			'email' => 'eathorxxne@yahoo.com',
+			'date' => '2021-08-10 19:08:58',
+			'user_id' => 'eathoxxrne.banda',
+			'gender' => 'male',
+			'school_id' => '0PbzcO3ZaG5rpvjeleQ3UHSWE81m00vLyqNGBEgK4waH',
+			'rank' => 'super_admin',
+			'password' => '$2B8ZBzw6Ocrci',
+			'image' => 'uploads/cindaral_1585854603.jpg',
+		];
+		// $insert =
+		// $user->insert($datas);
+		// if($insert) 
+		// {
+		$data = $user->findAll();
+		$this->view("home", ['rows' => $data]);
+		// }
+
 	}
 }
