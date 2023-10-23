@@ -25,14 +25,14 @@
                                 <form class="row g-3 needs-validation" novalidate method="post">
                                     <div class="col-12">
                                         <label for="yourFirstName" class="form-label">Your First Name</label>
-                                        <input type="text" value="<?= get_var('fname') ?>" name="fname" class="form-control" id="yourName" required>
+                                        <input type="text" value="<?= get_var('fname') ?>" name="firstname" class="form-control" id="yourName" required>
                                         <div class="invalid-feedback">Please, enter your first name!</div>
                                         <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['first_name']) ? $errors['first_name'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourLastName" class="form-label">Your Last Name</label>
-                                        <input type="text" value="<?= get_var('lname') ?>" name="lname" class="form-control" id="yourName" required>
+                                        <input type="text" value="<?= get_var('lname') ?>" name="lastname" class="form-control" id="yourName" required>
                                         <div class="invalid-feedback">Please, enter your first name!</div>
                                         <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['last_name']) ? $errors['last_name'] : ""; ?></div>
                                     </div>
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <select class="form-select" aria-label="Default select example" name="role" </option>
+                                        <select class="form-select" aria-label="Default select example" name="rank" </option>
                                             <option value="Student">Student</option>
                                             <option value="Reception">Reception</option>
                                             <option value="Admin">Admin</option>
@@ -72,7 +72,7 @@
 
                                     <div class="col-12">
                                         <div class="form-check">
-                                            <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                                            <input class="form-check-input" type="checkbox" value="" id="acceptTerms" required>
                                             <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
                                             <div class="invalid-feedback">You must agree before submitting.</div>
                                         </div>

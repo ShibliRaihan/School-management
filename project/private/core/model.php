@@ -36,7 +36,22 @@ class Model extends Database
 
     public function insert($data)
     {
-
+        if (property_exists($this, 'allowed_colum')) {
+            foreach($data as $key => $colum)
+            {
+                if (!in_array($key, $this->allowed_colum)) {
+                    # code...
+                    unset($data[$key]);
+                }
+                // ## // $data = $this->$colum($data);
+            }
+        }
+        if (property_exists($this, 'before_insert')) {
+            foreach($this->before_insert as $func)
+            {
+                $data = $this->$func($data);
+            }
+        }
 
         $keys = array_keys($data);
         $columns = implode(',', $keys);
