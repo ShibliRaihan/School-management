@@ -5,7 +5,7 @@
  */
 class User extends Model
 {
-    public function validated($DATA,) 
+    public function validated($DATA) 
     {
         $this->errors = [];
         if (empty($DATA['fname']) || !preg_match("/^[a-zA-Z]+$/",$DATA['fname'])) {
@@ -14,7 +14,7 @@ class User extends Model
         if (empty($DATA['lname']) || !preg_match("/^[a-zA-Z]+$/",$DATA['lname'])) {
             $this->errors['last_name'] = "Only letters allowed in last name";
         }
-        if (empty($DATA['email']) || filter_var($DATA['email'],FILTER_VALIDATE_EMAIL)) {
+        if (empty($DATA['email']) || !filter_var($DATA['email'],FILTER_VALIDATE_EMAIL)) {
             $this->errors['email'] = "Only email allowed!";
         }
         if (empty($DATA['gender'])) {

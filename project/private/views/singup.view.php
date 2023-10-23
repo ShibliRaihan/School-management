@@ -4,7 +4,8 @@
 <main>
     <div class="container">
         <?php
-        print_r($errors);
+        // print_r($errors);
+
         ?>
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
@@ -24,53 +25,48 @@
                                 <form class="row g-3 needs-validation" novalidate method="post">
                                     <div class="col-12">
                                         <label for="yourFirstName" class="form-label">Your First Name</label>
-                                        <input type="text" name="fname" class="form-control" id="yourName" required>
+                                        <input type="text" value="<?= get_var('fname') ?>" name="fname" class="form-control" id="yourName" required>
                                         <div class="invalid-feedback">Please, enter your first name!</div>
+                                        <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['first_name']) ? $errors['first_name'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourLastName" class="form-label">Your Last Name</label>
-                                        <input type="text" name="lname" class="form-control" id="yourName" required>
+                                        <input type="text" value="<?= get_var('lname') ?>" name="lname" class="form-control" id="yourName" required>
                                         <div class="invalid-feedback">Please, enter your first name!</div>
+                                        <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['last_name']) ? $errors['last_name'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourEmail" class="form-label">Your Email</label>
-                                        <input type="email" name="email" class="form-control" id="yourEmail" required>
-                                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                                        <input type="email" value="<?= get_var('email') ?>" name="email" class="form-control" id="yourEmail" required>
+                                        <div class="invalid-feedback">Please enter a valid Email address!</div>
+                                        <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['email']) ? $errors['email'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
-                                        <select class="form-select" aria-label="Default select example" name="gender">
-                                            <option disabled>Select Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Other">Other</option>
+                                        <select class="form-select" aria-label="Default select example" name="gender" </option>
+                                            <option <?= get_select('gender', '') ?> value="">--Select a Gender--</option>
+                                            <option <?= get_select('gender', 'male') ?> value="male">Male</option>
+                                            <option <?= get_select('gender', 'female',) ?> value="female">Female</option>
+                                            <option <?= get_select('gender', 'Other') ?> value="Other">Other</option>
                                         </select>
+                                        <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['gender']) ? $errors['gender'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
-                                        <select class="form-select" aria-label="Default select example" name="role">
-                                            <option disabled>Select Rank</option>
+                                        <select class="form-select" aria-label="Default select example" name="role" </option>
                                             <option value="Student">Student</option>
                                             <option value="Reception">Reception</option>
                                             <option value="Admin">Admin</option>
                                             <option value="Super">*Super Admin</option>
                                         </select>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label for="yourUsername" class="form-label">Username</label>
-                                        <div class="input-group has-validation">
-                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                            <input type="text" name="username" class="form-control" id="yourUsername" required>
-                                            <div class="invalid-feedback">Please choose a username.</div>
-                                        </div>
+                                        <div class="text-danger fw-bold p-2 text-decoration-underline"><?php echo isset($errors['role']) ? $errors['role'] : ""; ?></div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourPassword" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                        <input type="password" value="<?= get_var('password') ?>" name="password" class="form-control" id="yourPassword" required>
                                         <div class="invalid-feedback">Please enter your password!</div>
                                     </div>
 
