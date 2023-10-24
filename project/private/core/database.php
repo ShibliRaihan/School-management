@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Database connection
- */
+ *  Database connection
+ **/
 class Database
 {
 

@@ -24,20 +24,20 @@
                                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                     <p class="text-center small">Enter your username & password to login</p>
                                 </div>
-
+                                <div class="text-center text-bg-danger"><?php echo isset($error['email']) ? $error['email'] : "" ?></div>
                                 <form class="row g-3 needs-validation" novalidate method="post">
 
                                     <div class="col-12">
                                         <label for="yourUsername" class="form-label">Email</label>
                                         <div class="input-group has-validation">
-                                            <input type="email" name="email" class="form-control" id="email" required>
+                                            <input type="email" value="<?= get_var('email') ?>" name="email" class="form-control" id="email" required>
                                             <div class="invalid-feedback">Please enter your email.</div>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourPassword" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                        <input type="password" value="<?= get_var('password') ?>" name="password" class="form-control" id="yourPassword" required>
                                         <div class="invalid-feedback">Please enter your password!</div>
                                     </div>
 

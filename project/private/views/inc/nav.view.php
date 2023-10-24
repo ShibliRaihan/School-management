@@ -34,8 +34,18 @@
                 </ul> -->
 
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        User
+                    <?php
+                    if (Auth::user()) {
+                    ?>
+                        <h1 class="d-inline fw-bolder text-warning m-0 p-0">.</h1>
+                    <?php
+                    }
+                    ?>
+                    <button class="btn dropdown-toggle animate-charcter ps-0 ms-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php
+                        // echo Auth::user(); 
+                        echo Auth::user1();
+                        ?>
                     </button>
                     <ul class="ends dropdown-menu" aria-labelledby="dropdownMenuButton1" style="right: 0 !important; left: auto !important;">
                         <li><a class="dropdown-item" href="/School-managment/School-management/project/public/profile">Profile</a></li>
