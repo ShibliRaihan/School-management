@@ -1,5 +1,5 @@
 <?php $this->view('inc/top');  ?>
-<?php $this->view('inc/nav');  ?>
+
 
 <main>
     <div class="container">

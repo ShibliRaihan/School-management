@@ -9,13 +9,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        <a class="nav-link nav-items active" aria-current="page" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Class</a>
+                        <a class="nav-link nav-items text-uppercase" href="#">School</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Tests</a>
+                        <a class="nav-link nav-items text-uppercase" href="#">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-items text-uppercase" href="#">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-items text-uppercase" href="#">Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-items text-uppercase" href="#">Tests</a>
                     </li>
                     <li class="nav-item dropdown">
 

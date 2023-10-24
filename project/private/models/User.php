@@ -27,6 +27,9 @@ class User extends Model
         if (empty($DATA['email']) || !filter_var($DATA['email'],FILTER_VALIDATE_EMAIL)) {
             $this->errors['email'] = "Only email allowed!";
         }
+        if ($this->where('email', $DATA['email'])) {
+            $this->errors['email'] = "The email already used!";
+        }
         if (empty($DATA['gender'])) {
             $this->errors['gender'] = "Select gender!";
         }

@@ -1264,3 +1264,7 @@ h6 {
     background-position: 200% center;
   }
 }
+
+.nav-items:hover {
+  text-decoration: underline;
+}
