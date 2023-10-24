@@ -23,34 +23,23 @@
                 </ul>
             </div>
             <div class="">
-                <!-- <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    User
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                    <hr class="m-0" />
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul> -->
-
                 <div class="dropdown">
-                    <?php
+                    <!-- <?php
                     if (Auth::user()) {
                     ?>
-                        <h1 class="d-inline fw-bolder text-warning m-0 p-0">.</h1>
+                        <h1 class="d-inline fw-bolder text-muted m-0 p-0">.</h1>
                     <?php
                     }
-                    ?>
-                    <button class="btn dropdown-toggle animate-charcter ps-0 ms-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    ?> -->
+                    <button class="btn border-0 dropdown-toggle animate-charcter ps-0 ms-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php
-                        // echo Auth::user(); 
-                        echo Auth::user1();
+                        echo Auth::getFirstname();
                         ?>
                     </button>
                     <ul class="ends dropdown-menu" aria-labelledby="dropdownMenuButton1" style="right: 0 !important; left: auto !important;">
                         <li><a class="dropdown-item" href="/School-managment/School-management/project/public/profile">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT?>logout">Logout</a></li>
                     </ul>
                 </div>
             </div>
