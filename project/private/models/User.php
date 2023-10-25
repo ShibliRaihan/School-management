@@ -5,7 +5,7 @@
  */
 class User extends Model
 {
-    protected $allowed_colum = [
+    protected $allowedColumns = [
         'firstname',
         'lastname',
         'email',
@@ -14,7 +14,7 @@ class User extends Model
         'password',
         'date',
     ];
-    protected $before_insert = ['make_user_id','make_school_id','hash_password'];
+    protected $beforeInsert = ['make_user_id','make_school_id','hash_password'];
     public function validated($DATA) 
     {
         $this->errors = [];

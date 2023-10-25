@@ -12,7 +12,7 @@
                         <a class="nav-link nav-items active" aria-current="page" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-items text-uppercase" href="<?= ROOT ?>school">School</a>
+                        <a class="nav-link nav-items text-uppercase" href="<?= ROOT ?>schools">School</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-items text-uppercase" href="#">Staff</a>

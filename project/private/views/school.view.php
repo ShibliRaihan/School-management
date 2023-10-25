@@ -20,6 +20,7 @@
                                 <h2 class=""></h2><?php echo $row->school ?> </h2>
                                 <h6 class=" text-end fw-bold"></h6>
                                 <button class="btn btn-light rounded-1 text-decoration-underline profile">more..</button>
+                                
                             </div>
                         </div>
                     </div>
