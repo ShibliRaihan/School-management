@@ -16,22 +16,45 @@ class Model extends Database
     }
 
 
-    public function where($column, $value)
+    public function where($column, $value, $orderby = 'desc')
     {
 
         $column = addslashes($column);
-        $query = "select * from $this->table where $column = :value";
-        return $this->query($query, [
+        $query = "select * from $this->table where $column = :value order by id $orderby";
+        $data = $this->query($query, [
             'value' => $value
         ]);
+
+        //run functions after select
+        if (is_array($data)) {
+            if (property_exists($this, 'afterSelect')) {
+                foreach ($this->afterSelect as $func) {
+                    $data = $this->$func($data);
+                }
+            }
+        }
+
+        return $data;
+
     }
 
 
-    public function findAll()
+    public function findAll($orderby = 'desc')
     {
 
-        $query = "select * from $this->table ";
-        return $this->query($query);
+        $query = "select * from $this->table order by id $orderby";
+        $data = $this->query($query);
+
+        //run functions after select
+        if (is_array($data)) {
+            if (property_exists($this, 'afterSelect')) {
+                foreach ($this->afterSelect as $func) {
+                    $data = $this->$func($data);
+                }
+            }
+        }
+
+        return $data;
     }
 
     public function insert($data)

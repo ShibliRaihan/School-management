@@ -19,7 +19,7 @@ class School extends Model
     protected $afterSelect = [
         'get_user',
     ];
-
+    
 
     public function validate($DATA)
     {
