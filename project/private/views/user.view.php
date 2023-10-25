@@ -13,8 +13,8 @@
 
                             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                             <h2><?php echo $row->firstname ?></h2>
-                            <h6 class="text-end fw-bold">Role: <span class="animate-charcter"><?php echo $row->rank?></span></h6>
-                            <button class="btn btn-light rounded-1 text-decoration-underline">Profile</button>
+                            <h6 class="text-end fw-bold">Role: <span class="animate-charcter"><?php echo $row->rank ?></span></h6>
+                            <button class="btn btn-light rounded-1 text-decoration-underline profile">Profile</button>
                         </div>
                     </div>
                 </div>

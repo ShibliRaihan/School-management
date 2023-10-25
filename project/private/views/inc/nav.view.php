@@ -12,13 +12,13 @@
                         <a class="nav-link nav-items active" aria-current="page" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-items text-uppercase" href="#">School</a>
+                        <a class="nav-link nav-items text-uppercase" href="<?= ROOT ?>school">School</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-items text-uppercase" href="#">Staff</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-items text-uppercase" href="#">Student</a>
+                        <a class="nav-link nav-items text-uppercase" href="">Student</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-items text-uppercase" href="#">Class</a>
@@ -34,11 +34,11 @@
             <div class="">
                 <div class="dropdown">
                     <!-- <?php
-                    if (Auth::user()) {
-                    ?>
+                            if (Auth::user()) {
+                            ?>
                         <h1 class="d-inline fw-bolder text-muted m-0 p-0">.</h1>
                     <?php
-                    }
+                            }
                     ?> -->
                     <button class="btn border-0 dropdown-toggle animate-charcter ps-0 ms-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php
@@ -48,7 +48,7 @@
                     <ul class="ends dropdown-menu" aria-labelledby="dropdownMenuButton1" style="right: 0 !important; left: auto !important;">
                         <li><a class="dropdown-item" href="/School-managment/School-management/project/public/profile">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="<?= ROOT?>logout">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>logout">Logout</a></li>
                     </ul>
                 </div>
             </div>

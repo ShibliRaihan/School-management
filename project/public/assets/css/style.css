@@ -1268,3 +1268,14 @@ h6 {
 .nav-items:hover {
   text-decoration: underline;
 }
+
+.profile:hover{
+  border-color: #ffffff;
+    background: white;
+    border: 1px solid;
+}
+
+.name-title {
+    font-size: 12px;
+    font-weight: bold;
+}
