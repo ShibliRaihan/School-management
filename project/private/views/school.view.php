@@ -2,7 +2,9 @@
 <?php $this->view('inc/nav');  ?>
 
 <main>
-    <button class="btn btn-light rounded-1 text-decoration-underline profile mt-4 ms-5 border "><i class="bi bi-patch-plus me-2"></i> Add New</button>
+    <a href="<?php ROOT ?>schools/add">
+        <button class="btn btn-light rounded-1 text-decoration-underline profile mt-4 ms-5 border "><i class="bi bi-patch-plus me-2"></i> Add New</button>
+    </a>
     <div class="container mt-5">
         <div class="row">
             <?php

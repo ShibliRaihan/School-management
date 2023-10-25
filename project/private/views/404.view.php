@@ -1,4 +1,5 @@
-<main>
+<?php $this->view('inc/top');  ?>
+<?php $this->view('inc/nav');  ?><main>
     <div class="container">
 
         <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center">
@@ -17,3 +18,4 @@
 
     </div>
 </main><!-- End #main -->
+<?php $this->view('inc/down');  ?>
