@@ -108,6 +108,4 @@ class Model extends Database
         return $this->query($query, $data);
     }
 
-   
-
 }

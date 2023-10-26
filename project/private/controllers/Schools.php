@@ -36,4 +36,53 @@ class Schools extends Controller
 
         $this->view('school.add',['errors'=> $errors]);
     }
+    public function edit($id = null)
+    {
+        // code...
+        if (!Auth::logged_in()) {
+            $this->redirect('login');
+        }
+
+        $school = new School();
+
+        $errors = array();
+        if (count($_POST) > 0) {
+
+            if ($school->validate($_POST)) {
+
+                $school->update($id, $_POST);
+                $this->redirect('schools');
+            } else {
+                //errors
+                $errors = $school->errors;
+            }
+        }
+
+        $row = $school->where('id', $id);
+
+
+            $this->view('schools.edit', [
+                'row' => $row,
+                'errors' => $errors,
+            ]);
+    }
+
+    public function delete($id = null)
+    {
+        // code...
+        if (!Auth::logged_in()) {
+            $this->redirect('login');
+        }
+
+        $school = new School();
+
+
+        if ($id) {
+
+            $school->delete($id);
+            $this->redirect('schools');
+        }
+
+        $this->view('schools');
+    }
 }
