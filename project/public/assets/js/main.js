@@ -149,7 +149,7 @@
             }
           ],
           [{
-              script: "super"
+              script: "Super"
             },
             {
               script: "sub"

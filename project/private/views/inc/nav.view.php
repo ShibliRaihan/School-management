@@ -2,7 +2,12 @@
     <?php $this->view('inc/breadcrumb'); ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 pt-0">
         <div class="container-fluid">
-            <a class="navbar-brand logos" href="#"><img class="img-fluid" src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-school-logo-png-image_6851480.png" alt="" srcset=""></a>
+            <a class="navbar-brand position-relative logos d-flex flex-row justify-content-center" href="#">
+                <img class="img-fluid" src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-school-logo-png-image_6851480.png" alt="" srcset="">
+                <span class="position-absolute fw-bold text-success text-decoration-underline" style="top: -5px;left: 45px;">
+                    S.N. ( <?= Auth::getSchool_name() ?> )
+                </span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -652,7 +652,7 @@ const VERSION = '5.3.2';
 
 class BaseComponent extends Config {
   constructor(element, config) {
-    super();
+    Super();
     element = getElement(element);
     if (!element) {
       return;
@@ -994,7 +994,7 @@ const DefaultType$c = {
 
 class Swipe extends Config {
   constructor(element, config) {
-    super();
+    Super();
     this._element = element;
     if (!element || !Swipe.isSupported()) {
       return;
@@ -1148,7 +1148,7 @@ const DefaultType$b = {
 
 class Carousel extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._interval = null;
     this._activeElement = null;
     this._isSliding = false;
@@ -1228,7 +1228,7 @@ class Carousel extends BaseComponent {
     if (this._swipeHelper) {
       this._swipeHelper.dispose();
     }
-    super.dispose();
+    Super.dispose();
   }
 
   // Private
@@ -1493,7 +1493,7 @@ const DefaultType$a = {
 
 class Collapse extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._isTransitioning = false;
     this._triggerArray = [];
     const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$4);
@@ -1753,7 +1753,7 @@ const DefaultType$9 = {
 
 class Dropdown extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._popper = null;
     this._parent = this._element.parentNode; // dropdown wrapper
     // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
@@ -1817,7 +1817,7 @@ class Dropdown extends BaseComponent {
     if (this._popper) {
       this._popper.destroy();
     }
-    super.dispose();
+    Super.dispose();
   }
   update() {
     this._inNavbar = this._detectNavbar();
@@ -1850,7 +1850,7 @@ class Dropdown extends BaseComponent {
     EventHandler.trigger(this._element, EVENT_HIDDEN$5, relatedTarget);
   }
   _getConfig(config) {
-    config = super._getConfig(config);
+    config = Super._getConfig(config);
     if (typeof config.reference === 'object' && !isElement(config.reference) && typeof config.reference.getBoundingClientRect !== 'function') {
       // Popper virtual elements require a getBoundingClientRect method
       throw new TypeError(`${NAME$a.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
@@ -2088,7 +2088,7 @@ const DefaultType$8 = {
 
 class Backdrop extends Config {
   constructor(config) {
-    super();
+    Super();
     this._config = this._getConfig(config);
     this._isAppended = false;
     this._element = null;
@@ -2210,7 +2210,7 @@ const DefaultType$7 = {
 
 class FocusTrap extends Config {
   constructor(config) {
-    super();
+    Super();
     this._config = this._getConfig(config);
     this._isActive = false;
     this._lastTabNavDirection = null;
@@ -2423,7 +2423,7 @@ const DefaultType$6 = {
 
 class Modal extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._dialog = SelectorEngine.findOne(SELECTOR_DIALOG, this._element);
     this._backdrop = this._initializeBackDrop();
     this._focustrap = this._initializeFocusTrap();
@@ -2484,7 +2484,7 @@ class Modal extends BaseComponent {
     EventHandler.off(this._dialog, EVENT_KEY$4);
     this._backdrop.dispose();
     this._focustrap.deactivate();
-    super.dispose();
+    Super.dispose();
   }
   handleUpdate() {
     this._adjustDialog();
@@ -2725,7 +2725,7 @@ const DefaultType$5 = {
 
 class Offcanvas extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._isShown = false;
     this._backdrop = this._initializeBackDrop();
     this._focustrap = this._initializeFocusTrap();
@@ -2804,7 +2804,7 @@ class Offcanvas extends BaseComponent {
   dispose() {
     this._backdrop.dispose();
     this._focustrap.deactivate();
-    super.dispose();
+    Super.dispose();
   }
 
   // Private
@@ -3043,7 +3043,7 @@ const DefaultContentType = {
 
 class TemplateFactory extends Config {
   constructor(config) {
-    super();
+    Super();
     this._config = this._getConfig(config);
   }
 
@@ -3089,12 +3089,12 @@ class TemplateFactory extends Config {
 
   // Private
   _typeCheckConfig(config) {
-    super._typeCheckConfig(config);
+    Super._typeCheckConfig(config);
     this._checkContent(config.content);
   }
   _checkContent(arg) {
     for (const [selector, content] of Object.entries(arg)) {
-      super._typeCheckConfig({
+      Super._typeCheckConfig({
         selector,
         entry: content
       }, DefaultContentType);
@@ -3225,7 +3225,7 @@ class Tooltip extends BaseComponent {
     if (typeof Popper === 'undefined') {
       throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
     }
-    super(element, config);
+    Super(element, config);
 
     // Private
     this._isEnabled = true;
@@ -3283,7 +3283,7 @@ class Tooltip extends BaseComponent {
       this._element.setAttribute('title', this._element.getAttribute('data-bs-original-title'));
     }
     this._disposePopper();
-    super.dispose();
+    Super.dispose();
   }
   show() {
     if (this._element.style.display === 'none') {
@@ -3782,7 +3782,7 @@ const DefaultType$1 = {
 
 class ScrollSpy extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
 
     // this._element is the observablesContainer and config.target the menu links wrapper
     this._targetLinks = new Map();
@@ -3823,7 +3823,7 @@ class ScrollSpy extends BaseComponent {
   }
   dispose() {
     this._observer.disconnect();
-    super.dispose();
+    Super.dispose();
   }
 
   // Private
@@ -4037,7 +4037,7 @@ const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"]
 
 class Tab extends BaseComponent {
   constructor(element) {
-    super(element);
+    Super(element);
     this._parent = this._element.closest(SELECTOR_TAB_PANEL);
     if (!this._parent) {
       return;
@@ -4303,7 +4303,7 @@ const Default = {
 
 class Toast extends BaseComponent {
   constructor(element, config) {
-    super(element, config);
+    Super(element, config);
     this._timeout = null;
     this._hasMouseInteraction = false;
     this._hasKeyboardInteraction = false;
@@ -4362,7 +4362,7 @@ class Toast extends BaseComponent {
     if (this.isShown()) {
       this._element.classList.remove(CLASS_NAME_SHOW);
     }
-    super.dispose();
+    Super.dispose();
   }
   isShown() {
     return this._element.classList.contains(CLASS_NAME_SHOW);

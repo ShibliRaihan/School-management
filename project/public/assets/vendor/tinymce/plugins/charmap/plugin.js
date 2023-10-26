@@ -551,15 +551,15 @@
             ],
             [
               185,
-              'superscript one'
+              'Superscript one'
             ],
             [
               178,
-              'superscript two'
+              'Superscript two'
             ],
             [
               179,
-              'superscript three'
+              'Superscript three'
             ],
             [
               188,
@@ -1287,7 +1287,7 @@
             ],
             [
               8835,
-              'superset of'
+              'Superset of'
             ],
             [
               8836,
@@ -1299,7 +1299,7 @@
             ],
             [
               8839,
-              'superset of or equal to'
+              'Superset of or equal to'
             ],
             [
               8853,

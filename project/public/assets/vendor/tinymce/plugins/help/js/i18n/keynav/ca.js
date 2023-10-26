@@ -65,7 +65,7 @@ tinymce.Resource.add('tinymce.html-i18n.help-keynav.ca',
   '\n' +
   '<p>Per tancar un menú, un submenú o un menú emergent oberts, premeu la tecla <strong>Esc</strong>.\n' +
   '\n' +
-  "<p>Si el focus actual es troba a la ‘part superior’ d'una secció específica de la interfície d'usuari, en prémer la tecla <strong>Esc</strong> també es tanca\n" +
+  "<p>Si el focus actual es troba a la ‘part Superior’ d'una secció específica de la interfície d'usuari, en prémer la tecla <strong>Esc</strong> també es tanca\n" +
   '  completament la navegació amb el teclat.</p>\n' +
   '\n' +
   "<h1>Execució d'un element de menú o d'un botó de la barra d'eines</h1>\n" +

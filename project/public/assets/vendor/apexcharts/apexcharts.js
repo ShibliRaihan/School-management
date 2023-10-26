@@ -100,19 +100,19 @@
     return obj;
   }
 
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
+  function _inherits(subClass, SuperClass) {
+    if (typeof SuperClass !== "function" && SuperClass !== null) {
       throw new TypeError("Super expression must either be null or a function");
     }
 
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
+    subClass.prototype = Object.create(SuperClass && SuperClass.prototype, {
       constructor: {
         value: subClass,
         writable: true,
         configurable: true
       }
     });
-    if (superClass) _setPrototypeOf(subClass, superClass);
+    if (SuperClass) _setPrototypeOf(subClass, SuperClass);
   }
 
   function _getPrototypeOf(o) {
@@ -146,7 +146,7 @@
 
   function _assertThisInitialized(self) {
     if (self === void 0) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw new ReferenceError("this hasn't been initialised - Super() hasn't been called");
     }
 
     return self;
@@ -14887,14 +14887,14 @@
   var ZoomPanSelection = /*#__PURE__*/function (_Toolbar) {
     _inherits(ZoomPanSelection, _Toolbar);
 
-    var _super = _createSuper(ZoomPanSelection);
+    var _Super = _createSuper(ZoomPanSelection);
 
     function ZoomPanSelection(ctx) {
       var _this;
 
       _classCallCheck(this, ZoomPanSelection);
 
-      _this = _super.call(this, ctx);
+      _this = _Super.call(this, ctx);
       _this.ctx = ctx;
       _this.w = ctx.w;
       _this.dragged = false;
@@ -20034,12 +20034,12 @@
   var BarStacked = /*#__PURE__*/function (_Bar) {
     _inherits(BarStacked, _Bar);
 
-    var _super = _createSuper(BarStacked);
+    var _Super = _createSuper(BarStacked);
 
     function BarStacked() {
       _classCallCheck(this, BarStacked);
 
-      return _super.apply(this, arguments);
+      return _Super.apply(this, arguments);
     }
 
     _createClass(BarStacked, [{
@@ -20534,12 +20534,12 @@
   var BoxCandleStick = /*#__PURE__*/function (_Bar) {
     _inherits(BoxCandleStick, _Bar);
 
-    var _super = _createSuper(BoxCandleStick);
+    var _Super = _createSuper(BoxCandleStick);
 
     function BoxCandleStick() {
       _classCallCheck(this, BoxCandleStick);
 
-      return _super.apply(this, arguments);
+      return _Super.apply(this, arguments);
     }
 
     _createClass(BoxCandleStick, [{
@@ -22555,14 +22555,14 @@
   var Radial = /*#__PURE__*/function (_Pie) {
     _inherits(Radial, _Pie);
 
-    var _super = _createSuper(Radial);
+    var _Super = _createSuper(Radial);
 
     function Radial(ctx) {
       var _this;
 
       _classCallCheck(this, Radial);
 
-      _this = _super.call(this, ctx);
+      _this = _Super.call(this, ctx);
       _this.ctx = ctx;
       _this.w = ctx.w;
       _this.animBeginArr = [0];
@@ -22950,12 +22950,12 @@
   var RangeBar = /*#__PURE__*/function (_Bar) {
     _inherits(RangeBar, _Bar);
 
-    var _super = _createSuper(RangeBar);
+    var _Super = _createSuper(RangeBar);
 
     function RangeBar() {
       _classCallCheck(this, RangeBar);
 
-      return _super.apply(this, arguments);
+      return _Super.apply(this, arguments);
     }
 
     _createClass(RangeBar, [{
@@ -30742,7 +30742,7 @@
       /* create class */
       SVG[name + 'Effect'] = SVG.invent({
         create: function() {
-          //call super
+          //call Super
           this.constructor.call(this, SVG.create('fe' + name));
 
           //call constructor for this effect
@@ -30766,7 +30766,7 @@
       /* create class */
       SVG[name + 'Effect'] = SVG.invent({
         create: function() {
-          //call super
+          //call Super
           this.constructor.call(this, SVG.create('fe' + name));
 
           //call constructor for this effect
@@ -30790,7 +30790,7 @@
       /* create class */
       SVG[name] = SVG.invent({
         create: function() {
-          //call super
+          //call Super
           this.constructor.call(this, SVG.create('fe' + name));
 
           //call constructor for this effect

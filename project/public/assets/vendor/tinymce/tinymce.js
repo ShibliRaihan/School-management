@@ -20211,7 +20211,7 @@
           remove: 'all'
         },
         subscript: { inline: 'sub' },
-        superscript: { inline: 'sup' },
+        Superscript: { inline: 'sup' },
         code: { inline: 'code' },
         link: {
           inline: 'a',

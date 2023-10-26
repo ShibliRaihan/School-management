@@ -2892,7 +2892,7 @@ Npm version bump due to package not being fully updated.
 - Added new insertCustomChar event that gets fired when a character is inserted by the charmap plugin.
 
 ### Fixed
-- Fixed bug where table cells started with a superfluous &nbsp; in IE10+.
+- Fixed bug where table cells started with a Superfluous &nbsp; in IE10+.
 - Fixed bug where table plugin would retain all BR tags when cells were merged.
 - Fixed bug where media plugin would strip underscores from youtube urls.
 - Fixed bug where IME input would fail on IE 11 if you typed within a table.

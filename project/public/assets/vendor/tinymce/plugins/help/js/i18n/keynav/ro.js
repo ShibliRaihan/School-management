@@ -65,7 +65,7 @@ tinymce.Resource.add('tinymce.html-i18n.help-keynav.ro',
   '\n' +
   '<p>Pentru a închide un meniu deschis, un sub-meniu deschis sau un meniu pop-up deschis, apăsați tasta <strong>Esc</strong>.\n' +
   '\n' +
-  '<p>Dacă focalizarea curentă este asupra „părții superioare” a unei anumite secțiuni a interfeței cu utilizatorul, prin apăsarea tastei <strong>Esc</strong> se iese, de asemenea,\n' +
+  '<p>Dacă focalizarea curentă este asupra „părții Superioare” a unei anumite secțiuni a interfeței cu utilizatorul, prin apăsarea tastei <strong>Esc</strong> se iese, de asemenea,\n' +
   '  în întregime din navigarea de la tastatură.</p>\n' +
   '\n' +
   '<h1>Executarea unui element de meniu sau a unui buton din bara de instrumente</h1>\n' +

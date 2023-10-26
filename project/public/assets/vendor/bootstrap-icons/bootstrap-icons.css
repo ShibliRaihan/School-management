@@ -1847,7 +1847,7 @@ url("./fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("wof
 .bi-rocket::before { content: "\f846"; }
 .bi-stripe::before { content: "\f847"; }
 .bi-subscript::before { content: "\f848"; }
-.bi-superscript::before { content: "\f849"; }
+.bi-Superscript::before { content: "\f849"; }
 .bi-trello::before { content: "\f84a"; }
 .bi-envelope-at-fill::before { content: "\f84b"; }
 .bi-envelope-at::before { content: "\f84c"; }

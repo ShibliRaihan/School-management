@@ -21,11 +21,15 @@
                                     <h6><?php echo $row->user_id  ?></h6>
                                     <span><?php echo $row->date ?></span>
                                 </div>
-                                <div>
+                                <div class="d-flex flex-column">
+                                    <a href="<?= ROOT ?>switch_school/<?= $row->id ?>">
+                                        <button type="button" class="btn btn-light text-info rounded-1 text-decoration-underline profile">
+                                            Switch<i class="bi bi-toggles2"></i>
+                                        </button>
+                                    </a>
                                     <a href="<?php echo ROOT ?>schools/edit/<?php echo $row->id ?>">
                                         <button class="btn btn-light rounded-1 text-decoration-underline profile">Edit</button>
                                     </a>
-
                                     <button type="button" class="btn btn-light text-danger rounded-1 text-decoration-underline profile" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Delete
                                     </button>

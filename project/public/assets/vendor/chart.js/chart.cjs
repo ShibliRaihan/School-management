@@ -1416,7 +1416,7 @@ class BarController extends DatasetController {
         return parsed;
     }
  updateRangeFromParsed(range, scale, parsed, stack) {
-        super.updateRangeFromParsed(range, scale, parsed, stack);
+        Super.updateRangeFromParsed(range, scale, parsed, stack);
         const custom = parsed._custom;
         if (custom && scale === this._cachedMeta.vScale) {
             range.min = Math.min(range.min, custom.min);
@@ -1439,7 +1439,7 @@ class BarController extends DatasetController {
     }
     initialize() {
         this.enableOptionSharing = true;
-        super.initialize();
+        Super.initialize();
         const meta = this._cachedMeta;
         meta.stack = this.getDataset().stack;
     }
@@ -1661,17 +1661,17 @@ class BubbleController extends DatasetController {
     };
     initialize() {
         this.enableOptionSharing = true;
-        super.initialize();
+        Super.initialize();
     }
  parsePrimitiveData(meta, data, start, count) {
-        const parsed = super.parsePrimitiveData(meta, data, start, count);
+        const parsed = Super.parsePrimitiveData(meta, data, start, count);
         for(let i = 0; i < parsed.length; i++){
             parsed[i]._custom = this.resolveDataElementOptions(i + start).radius;
         }
         return parsed;
     }
  parseArrayData(meta, data, start, count) {
-        const parsed = super.parseArrayData(meta, data, start, count);
+        const parsed = Super.parseArrayData(meta, data, start, count);
         for(let i = 0; i < parsed.length; i++){
             const item = data[start + i];
             parsed[i]._custom = helpers_segment.valueOrDefault(item[2], this.resolveDataElementOptions(i + start).radius);
@@ -1679,7 +1679,7 @@ class BubbleController extends DatasetController {
         return parsed;
     }
  parseObjectData(meta, data, start, count) {
-        const parsed = super.parseObjectData(meta, data, start, count);
+        const parsed = Super.parseObjectData(meta, data, start, count);
         for(let i = 0; i < parsed.length; i++){
             const item = data[start + i];
             parsed[i]._custom = helpers_segment.valueOrDefault(item && item.r && +item.r, this.resolveDataElementOptions(i + start).radius);
@@ -1735,7 +1735,7 @@ class BubbleController extends DatasetController {
     }
  resolveDataElementOptions(index, mode) {
         const parsed = this.getParsed(index);
-        let values = super.resolveDataElementOptions(index, mode);
+        let values = Super.resolveDataElementOptions(index, mode);
         if (values.$shared) {
             values = Object.assign({}, values, {
                 $shared: false
@@ -1852,7 +1852,7 @@ class DoughnutController extends DatasetController {
         }
     };
     constructor(chart, datasetIndex){
-        super(chart, datasetIndex);
+        Super(chart, datasetIndex);
         this.enableOptionSharing = true;
         this.innerRadius = undefined;
         this.outerRadius = undefined;
@@ -2070,7 +2070,7 @@ class LineController extends DatasetController {
     initialize() {
         this.enableOptionSharing = true;
         this.supportsDecimation = true;
-        super.initialize();
+        Super.initialize();
     }
     update(mode) {
         const meta = this._cachedMeta;
@@ -2151,7 +2151,7 @@ class LineController extends DatasetController {
     draw() {
         const meta = this._cachedMeta;
         meta.dataset.updateControlPoints(this.chart.chartArea, meta.iScale.axis);
-        super.draw();
+        Super.draw();
     }
 }
 
@@ -2230,7 +2230,7 @@ class PolarAreaController extends DatasetController {
         }
     };
     constructor(chart, datasetIndex){
-        super(chart, datasetIndex);
+        Super(chart, datasetIndex);
         this.innerRadius = undefined;
         this.outerRadius = undefined;
     }
@@ -2491,7 +2491,7 @@ class ScatterController extends DatasetController {
         if (!this.datasetElementType && showLine) {
             this.datasetElementType = this.chart.registry.getElement('line');
         }
-        super.addElements();
+        Super.addElements();
     }
     updateElements(points, start, count, mode) {
         const reset = mode === 'reset';
@@ -3727,7 +3727,7 @@ function titleArgs(scale, offset, position, align) {
 }
 class Scale extends Element {
     constructor(cfg){
-        super();
+        Super();
          this.id = cfg.id;
          this.type = cfg.type;
          this.options = undefined;
@@ -6642,7 +6642,7 @@ class ArcElement extends Element {
     pixelMargin;
     startAngle;
     constructor(cfg){
-        super();
+        Super();
         this.options = undefined;
         this.circumference = undefined;
         this.startAngle = undefined;
@@ -6896,7 +6896,7 @@ class LineElement extends Element {
         _indexable: (name)=>name !== 'borderDash' && name !== 'fill'
     };
     constructor(cfg){
-        super();
+        Super();
         this.animated = true;
         this.options = undefined;
         this._chart = undefined;
@@ -7036,7 +7036,7 @@ class PointElement extends Element {
         borderColor: 'borderColor'
     };
     constructor(cfg){
-        super();
+        Super();
         this.options = undefined;
         this.parsed = undefined;
         this.skip = undefined;
@@ -7220,7 +7220,7 @@ class BarElement extends Element {
         borderColor: 'borderColor'
     };
     constructor(cfg){
-        super();
+        Super();
         this.options = undefined;
         this.horizontal = undefined;
         this.base = undefined;
@@ -8159,7 +8159,7 @@ const getBoxSize = (labelOpts, fontSize)=>{
 const itemsEqual = (a, b)=>a !== null && b !== null && a.datasetIndex === b.datasetIndex && a.index === b.index;
 class Legend extends Element {
  constructor(config){
-        super();
+        Super();
         this._added = false;
         this.legendHitBoxes = [];
  this._hoveredItem = null;
@@ -8697,7 +8697,7 @@ var plugin_legend = {
 
 class Title extends Element {
  constructor(config){
-        super();
+        Super();
         this.chart = config.chart;
         this.options = config.options;
         this.ctx = config.ctx;
@@ -9187,7 +9187,7 @@ const defaultCallbacks = {
 class Tooltip extends Element {
  static positioners = positioners;
     constructor(config){
-        super();
+        Super();
         this.opacity = 0;
         this._active = [];
         this._eventPosition = undefined;
@@ -9899,7 +9899,7 @@ class CategoryScale extends Scale {
         }
     };
     constructor(cfg){
-        super(cfg);
+        Super(cfg);
          this._startValue = undefined;
         this._valueRange = 0;
         this._addedLabels = [];
@@ -9915,7 +9915,7 @@ class CategoryScale extends Scale {
             }
             this._addedLabels = [];
         }
-        super.init(scaleOptions);
+        Super.init(scaleOptions);
     }
     parse(raw, index) {
         if (helpers_segment.isNullOrUndef(raw)) {
@@ -9959,7 +9959,7 @@ class CategoryScale extends Scale {
         return _getLabelForValue.call(this, value);
     }
  configure() {
-        super.configure();
+        Super.configure();
         if (!this.isHorizontal()) {
             this._reversePixels = !this._reversePixels;
         }
@@ -10093,7 +10093,7 @@ function relativeLabelSize(value, minSpacing, { horizontal , minRotation  }) {
 }
 class LinearScaleBase extends Scale {
     constructor(cfg){
-        super(cfg);
+        Super(cfg);
          this.start = undefined;
          this.end = undefined;
          this._startValue = undefined;
@@ -10193,7 +10193,7 @@ class LinearScaleBase extends Scale {
         const ticks = this.ticks;
         let start = this.min;
         let end = this.max;
-        super.configure();
+        Super.configure();
         if (this.options.offset && ticks.length) {
             const offset = (end - start) / Math.max(ticks.length - 1, 1) / 2;
             start -= offset;
@@ -10309,7 +10309,7 @@ class LogarithmicScale extends Scale {
         }
     };
     constructor(cfg){
-        super(cfg);
+        Super(cfg);
          this.start = undefined;
          this.end = undefined;
          this._startValue = undefined;
@@ -10387,7 +10387,7 @@ class LogarithmicScale extends Scale {
     }
  configure() {
         const start = this.min;
-        super.configure();
+        Super.configure();
         this._startValue = helpers_segment.log10(start);
         this._valueRange = helpers_segment.log10(this.max) - helpers_segment.log10(start);
     }
@@ -10703,7 +10703,7 @@ class RadialLinearScale extends LinearScaleBase {
         }
     };
     constructor(cfg){
-        super(cfg);
+        Super(cfg);
          this.xCenter = undefined;
          this.yCenter = undefined;
          this.drawingArea = undefined;
@@ -11054,7 +11054,7 @@ class TimeScale extends Scale {
         }
     };
  constructor(props){
-        super(props);
+        Super(props);
          this._cache = {
             data: [],
             labels: [],
@@ -11076,7 +11076,7 @@ class TimeScale extends Scale {
             round: time.round,
             isoWeekday: time.isoWeekday
         };
-        super.init(scaleOpts);
+        Super.init(scaleOpts);
         this._normalized = opts.normalized;
     }
  parse(raw, index) {
@@ -11086,7 +11086,7 @@ class TimeScale extends Scale {
         return parse(this, raw);
     }
     beforeLayout() {
-        super.beforeLayout();
+        Super.beforeLayout();
         this._cache = {
             data: [],
             labels: [],
@@ -11344,7 +11344,7 @@ class TimeSeriesScale extends TimeScale {
     static id = 'timeseries';
  static defaults = TimeScale.defaults;
  constructor(props){
-        super(props);
+        Super(props);
          this._table = [];
          this._minPos = undefined;
          this._tableRange = undefined;
@@ -11354,7 +11354,7 @@ class TimeSeriesScale extends TimeScale {
         const table = this._table = this.buildLookupTable(timestamps);
         this._minPos = interpolate(table, this.min);
         this._tableRange = interpolate(table, this.max) - this._minPos;
-        super.initOffsets(timestamps);
+        Super.initOffsets(timestamps);
     }
  buildLookupTable(timestamps) {
         const { min , max  } = this;
@@ -11395,7 +11395,7 @@ class TimeSeriesScale extends TimeScale {
  _generate() {
         const min = this.min;
         const max = this.max;
-        let timestamps = super.getDataTimestamps();
+        let timestamps = Super.getDataTimestamps();
         if (!timestamps.includes(min) || !timestamps.length) {
             timestamps.splice(0, 0, min);
         }

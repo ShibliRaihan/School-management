@@ -18001,7 +18001,7 @@
           },
           {
             title: 'Superscript',
-            format: 'superscript'
+            format: 'Superscript'
           },
           {
             title: 'Subscript',
@@ -21361,7 +21361,7 @@
       },
       format: {
         title: 'Format',
-        items: 'bold italic underline strikethrough superscript subscript codeformat | styles blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat'
+        items: 'bold italic underline strikethrough Superscript subscript codeformat | styles blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat'
       },
       tools: {
         title: 'Tools',
@@ -24340,9 +24340,9 @@
           icon: 'subscript'
         },
         {
-          name: 'superscript',
+          name: 'Superscript',
           text: 'Superscript',
-          icon: 'superscript'
+          icon: 'Superscript'
         }
       ], (btn, _idx) => {
         editor.ui.registry.addToggleButton(btn.name, {
@@ -24533,10 +24533,10 @@
           icon: 'subscript'
         },
         {
-          name: 'superscript',
+          name: 'Superscript',
           text: 'Superscript',
           action: 'Superscript',
-          icon: 'superscript'
+          icon: 'Superscript'
         },
         {
           name: 'removeformat',

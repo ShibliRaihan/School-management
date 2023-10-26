@@ -65,7 +65,7 @@ tinymce.Resource.add('tinymce.html-i18n.help-keynav.it',
   '\n' +
   '<p>Per chiudere un menu aperto, un sottomenu aperto o un menu a comparsa aperto, premere il tasto <strong>ESC</strong>.\n' +
   '\n' +
-  "<p>Se lo stato attivo corrente si trova nella parte superiore di una particolare sezione dell'interfaccia utente, premendo il tasto <strong>ESC</strong> si esce\n" +
+  "<p>Se lo stato attivo corrente si trova nella parte Superiore di una particolare sezione dell'interfaccia utente, premendo il tasto <strong>ESC</strong> si esce\n" +
   '  completamente dalla navigazione tramite tastiera.</p>\n' +
   '\n' +
   '<h1>Eseguire una voce di menu o un pulsante della barra degli strumenti</h1>\n' +
