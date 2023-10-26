@@ -11,7 +11,7 @@
             if ($rows) :
                 foreach ($rows as $row) {
             ?>
-                    <div class="col-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 m-auto">
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 m-auto">
                         <div class="card shadow">
                             <div class="d-flex flex-row card-body profile-card pt-4 align-items-center justify-content-around">
 
